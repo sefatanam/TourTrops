@@ -1,0 +1,34 @@
+﻿<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Calulate Your Journey Distance & Time :</h2>
+      @*<p>
+          This demonstrates getting and displaying the distance between two points
+        </p>*@
+      <div>
+        <div class="align-content-center d-flex justify-content-center">
+          Travel From : <input id="travelfrom" type="text" name="name" value="" />
+          To : <input id="travelto" type="text" name="name" value="" />
+          <input type="button" value="Get Route" onclick="GetRoute()" />
+
+        </div>
+        <br />
+        <div>
+          <div id="dvDistance">
+          </div>
+        </div>
+
+      </div>
+
+      <div id="dvMap" style="min-height:500px"></div>
+
+    </div>
+  </div>
+</div>
+@section scripts{
+
+  <!--ENSURE YOU CHANGE TO YOUR OWN API KEY HERE !!! -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAydJUCR8cTpqsjKnVGymZxiBS6Z06J7Y8&callback=initMap"
+          type="text/javascript"></script>
+  <script src="~/Scripts/Demo.js"></script>
+}

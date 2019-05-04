@@ -1,0 +1,136 @@
+﻿
+@model ThemeLayout.Models.ViewModels.SearchVm
+
+@if (Model.Transports != null && Model.Transports.Count > 0)
+{
+  <section class="destinations-area section-gap">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="menu-content">
+          <div class="title text-center">
+            <h1 class="mb-10">Transport List</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        @foreach (var item in Model.Transports)
+        {
+          <div class="col-lg-4">
+            <div class="single-destinations">
+              <div class="thumb">
+
+                @{
+                  var base64 = Convert.ToBase64String(item.Image);
+                  var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+                }
+                <img src="@imgsrc" style="max-height:400px;max-width:700px" />
+              </div>
+              <div class="details">
+                <h4 class="d-flex justify-content-between">
+                  <span>@item.Name</span>
+                </h4>
+                <ul class="package-list">
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Name</span>
+                    <span>@item.Name</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>From</span>
+                    <span>@item.From</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>To</span>
+                    <span>@item.To</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Time</span>
+                    <span>@item.DateTime</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Bus station</span>
+                    <span>@item.BusStation</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Price</span>
+                    <a href="#" class="price-btn">@item.Price</a>
+                  </li>
+                </ul>
+                <button class="btn btn-success"> Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        }
+
+      </div>
+    </div>
+  </section>
+}
+
+@if (Model.Hotels != null && Model.Hotels.Count > 0)
+{
+  <section class="destinations-area section-gap">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="menu-content">
+          <div class="title text-center">
+            <h1 class="mb-10">Hotel List</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        @foreach (var item in Model.Hotels)
+        {
+          <div class="col-lg-4">
+            <div class="single-destinations">
+              <div class="thumb">
+                @{
+                  var base64 = Convert.ToBase64String(item.Photo);
+                  var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+                }
+                <img src="@imgsrc" style="max-height:400px;max-width:700px" />
+              </div>
+              <div class="details">
+                <h4 class="d-flex justify-content-between">
+                  <span>@item.Name</span>
+                </h4>
+                <ul class="package-list">
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Name</span>
+                    <span>@item.Name</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Review</span>
+                    <span>@item.Review</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Duration</span>
+                    <span>@item.Duration</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Location</span>
+                    <span>@item.Location</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Facilities</span>
+                    <span>@item.Facilities</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Category</span>
+                    <span>@item.Catagory</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                    <span>Price</span>
+                    <a href="#" class="price-btn">@item.Price BDT</a>
+                  </li>
+                </ul>
+                <button class="btn btn-success"> Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+}

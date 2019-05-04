@@ -1,0 +1,89 @@
+﻿
+
+@using ThemeLayout
+@model IEnumerable<ThemeLayout.Models.Restuarant>
+
+<section class="destinations-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content">
+        <div class="title text-center">
+          <h1 class="mb-10">Restuarant List</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      @foreach (var item in Model)
+      {
+        <div class="col-lg-4">
+          <div class="single-destinations">
+            <div class="thumb">
+              @{
+                var base64 = Convert.ToBase64String(item.Photo);
+                var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+              }
+              <img src="@imgsrc" style="max-height:400px;max-width:700px" />
+            </div>
+            <div class="details">
+              <h4 class="d-flex justify-content-between">
+                <span>@item.Name</span>
+              </h4>
+              <ul class="package-list">
+                <li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Name</span>
+                  <span>@item.Name</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Rating</span>
+                  <span>
+                    <div class="star">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </span>
+                </li>
+                @*<li class="d-flex justify-content-betWe Provide Affordable Prices
+en align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Review</span>
+                  <span>@item.Review</span>
+                </li>*@
+                @*<li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Duration</span>
+                  <span>@item.Duration</span>
+                </li>*@
+                <li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Location</span>
+                  <span>@item.Location</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Facilities</span>
+                  <span>@item.Facilities</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center" style="border-bottom : 1px thin ;margin-bottom:4px;padding-bottom:3px">
+                  <span>Category</span>
+                  <span>@item.Catagory</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">View on map</a>
+                </li>
+                @*<li class="d-flex justify-content-between align-items-center" style=" margin-bottom:4px;padding-bottom:3px">
+                  <span>Price</span>
+                  <a href="#" class="price-btn">@item.Price BDT</a>
+                </li>*@
+              </ul>
+              <button class="btn btn-success"> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+
+

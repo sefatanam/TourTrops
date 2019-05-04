@@ -1,0 +1,87 @@
+﻿
+<br />
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  @Html.AntiForgeryToken()
+  <div align="center">
+    <div class="panel panel-primary" style="width:700px">
+      <div class="panel-heading">
+        <div class="panel-title">Preferences</div>
+      </div>
+      <div class="panel-body">
+        <div class=" text-center col-sm-12 align-items-center justify-content-center d-flex">
+          <form class="form-inline text-center transport-form">
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="text" name="from" placeholder="From">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="text" name="To" placeholder="To">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="Date" name="Date" placeholder="Date">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="number" name="Budget" placeholder="Budget">
+            </div>
+            <div>
+              <button class="btn btn-success" style="height:35px;width:50px;font-size:large">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+}
+<section class="popular-destination-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Places you can visit in Dhaka</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Foffroadbangladesh.com%2Fwp-content%2Fuploads%2F2015%2F03%2FAhsan_Manzil-Front_View-Mahbub-Hossain-Shaheed1-626x365.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/Y1486k1zjhF2" class="price-btn">see location on Map</a>
+            <h4>Ahsan Manjil</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F9c%2F%25E0%25A6%259C%25E0%25A6%25BE%25E0%25A6%25A4%25E0%25A7%2580%25E0%25A6%25AF%25E0%25A6%25BC_%25E0%25A6%25B8%25E0%25A7%258D%25E0%25A6%25AE%25E0%25A7%2583%25E0%25A6%25A4%25E0%25A6%25BF_%25E0%25A6%25B8%25E0%25A7%258C%25E0%25A6%25A7_-_The_National_Martyrs%2527_Monument_of_Bangladesh.jpg%2F1200px-%25E0%25A6%259C%25E0%25A6%25BE%25E0%25A6%25A4%25E0%25A7%2580%25E0%25A6%25AF%25E0%25A6%25BC_%25E0%25A6%25B8%25E0%25A7%258D%25E0%25A6%25AE%25E0%25A7%2583%25E0%25A6%25A4%25E0%25A6%25BF_%25E0%25A6%25B8%25E0%25A7%258C%25E0%25A6%25A7_-_The_National_Martyrs%2527_Monument_of_Bangladesh.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/oSxu1ZnbV8N2" class="price-btn">see location on Map</a>
+            <h4 style="color: black">National memorial</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-VNmc2N9Uz2Y%2FT5pfIBpVwTI%2FAAAAAAAAAFo%2FlYGrzsxG_0M%2Fs640%2F116688.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/xGPGjRnQF452" class="price-btn">see location on Map</a>
+            <h4>Lalbag kella</h4>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>

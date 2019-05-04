@@ -1,0 +1,102 @@
+﻿
+@using (Html.BeginForm("Search", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  @Html.AntiForgeryToken()
+  <div align="center">
+    <div class="panel " style="width:700px;margin-top:20px">
+      <div class="panel-heading">
+        <div class="panel-title">Preferences</div>
+      </div>
+      <div class="panel-body">
+        <div class=" text-center col-sm-12 align-items-center justify-content-center d-flex">
+          <form class="form-inline text-center transport-form">
+            <div class="form-group" style=" vertical-align: middle; margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="text" name="from" placeholder="From">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="text" name="To" placeholder="To">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="number" name="BudgetFrom" placeholder="Budget from">
+            </div>
+            <div class="form-group" style="margin-right:10px">
+              <input style="font-size:large" class=" form-control border border-primary" type="number" name="BudgetTo" placeholder="Budget to">
+            </div>
+            <div>
+              <button style="font-size:larger"class="btn btn-success">search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+}
+<section class="popular-destination-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Places you can visit in Dhaka</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Foffroadbangladesh.com%2Fwp-content%2Fuploads%2F2015%2F03%2FAhsan_Manzil-Front_View-Mahbub-Hossain-Shaheed1-626x365.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/Y1486k1zjhF2" class="price-btn">see location on Map</a>
+            <h4>Ahsan Manjil</h4>
+          </div>
+
+        </div>
+        <div>
+          <p>
+            Ahsan Manzil (Bengali: আহসান মঞ্জিল, Ahsan Monjil) was the official residential palace and seat of
+            the Nawab of Dhaka.[1] The building is situated at Kumartoli along the banks of the
+            Buriganga River in Dhaka, Bangladesh. Construction was started in 1859 and was completed
+            in 1872.[1] It was constructed in the Indo-Saracenic Revival architecture. It has been
+            designated as a national museum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F9c%2F%25E0%25A6%259C%25E0%25A6%25BE%25E0%25A6%25A4%25E0%25A7%2580%25E0%25A6%25AF%25E0%25A6%25BC_%25E0%25A6%25B8%25E0%25A7%258D%25E0%25A6%25AE%25E0%25A7%2583%25E0%25A6%25A4%25E0%25A6%25BF_%25E0%25A6%25B8%25E0%25A7%258C%25E0%25A6%25A7_-_The_National_Martyrs%2527_Monument_of_Bangladesh.jpg%2F1200px-%25E0%25A6%259C%25E0%25A6%25BE%25E0%25A6%25A4%25E0%25A7%2580%25E0%25A6%25AF%25E0%25A6%25BC_%25E0%25A6%25B8%25E0%25A7%258D%25E0%25A6%25AE%25E0%25A7%2583%25E0%25A6%25A4%25E0%25A6%25BF_%25E0%25A6%25B8%25E0%25A7%258C%25E0%25A6%25A7_-_The_National_Martyrs%2527_Monument_of_Bangladesh.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/oSxu1ZnbV8N2" class="price-btn">see location on Map</a>
+            <h4 style=":">National memorial</h4>
+          </div>
+
+        </div>
+        <div>
+          National Martyrs' Memorial is the national monument of Bangladesh, set up in the memory of those who died in the Bangladesh Liberation War of 1971, which brought independence and separated Bangladesh from Pakistan. The monument is located in Savar, about 35 km north-west of the capital, Dhaka. It was designed by Syed Mainul Hossain.
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="single-destination relative">
+          <div class="thumb relative">
+            <div class="overlay overlay-bg"></div>
+            <img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-VNmc2N9Uz2Y%2FT5pfIBpVwTI%2FAAAAAAAAAFo%2FlYGrzsxG_0M%2Fs640%2F116688.jpg&f=1" alt="">
+          </div>
+          <div class="desc">
+            <a href="https://goo.gl/maps/xGPGjRnQF452" class="price-btn">see location on Map</a>
+            <h4>Lalbag kella</h4>
+          </div>
+        </div>
+        <div>
+          National Martyrs' Memorial is the national monument of Bangladesh, set up in the memory of those who died in the Bangladesh Liberation War of 1971, which brought independence and separated Bangladesh from Pakistan. The monument is located in Savar, about 35 km north-west of the capital, Dhaka. It was designed by Syed Mainul Hossain.
+        </div>
+      </div>
+
+</div>
+  </div>
+</section>

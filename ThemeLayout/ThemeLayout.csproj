@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D04069D2-734C-460B-9734-9D82253A3F95}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThemeLayout</RootNamespace>
+    <AssemblyName>ThemeLayout</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904051317549_InitialMigration.cs" />
+    <Compile Include="Migrations\201904051317549_InitialMigration.Designer.cs">
+      <DependentUpon>201904051317549_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904060450107_RestuarantModelAdd.cs" />
+    <Compile Include="Migrations\201904060450107_RestuarantModelAdd.Designer.cs">
+      <DependentUpon>201904060450107_RestuarantModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\Restuarant.cs" />
+    <Compile Include="Models\Search.cs" />
+    <Compile Include="Models\Transport.cs" />
+    <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\ViewModels\SearchVm.cs" />
+    <Compile Include="ProjectDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Demo.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="travel\about.html" />
+    <Content Include="travel\blog-home.html" />
+    <Content Include="travel\blog-single.html" />
+    <Content Include="travel\contact.html" />
+    <Content Include="travel\css\animate.min.css" />
+    <Content Include="travel\css\bootstrap.css" />
+    <Content Include="travel\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="travel\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="travel\css\bootstrap\bootstrap.css" />
+    <Content Include="travel\css\font-awesome.min.css" />
+    <Content Include="travel\css\jquery-ui.css" />
+    <Content Include="travel\css\linearicons.css" />
+    <Content Include="travel\css\magnific-popup.css" />
+    <Content Include="travel\css\main.css" />
+    <Content Include="travel\css\nice-select.css" />
+    <Content Include="travel\css\owl.carousel.css" />
+    <Content Include="travel\elements.html" />
+    <Content Include="travel\Empty.html" />
+    <Content Include="travel\fonts\fontawesome-webfont.svg" />
+    <Content Include="travel\fonts\Linearicons-Free.svg" />
+    <Content Include="travel\hotels.html" />
+    <Content Include="travel\img\about-img.jpg" />
+    <Content Include="travel\img\about\info-img.jpg" />
+    <Content Include="travel\img\b1.jpg" />
+    <Content Include="travel\img\b2.jpg" />
+    <Content Include="travel\img\b3.jpg" />
+    <Content Include="travel\img\blog\ads-banner.jpg" />
+    <Content Include="travel\img\blog\blog-home-banner.jpg" />
+    <Content Include="travel\img\blog\c1.jpg" />
+    <Content Include="travel\img\blog\c2.jpg" />
+    <Content Include="travel\img\blog\c3.jpg" />
+    <Content Include="travel\img\blog\c4.jpg" />
+    <Content Include="travel\img\blog\c5.jpg" />
+    <Content Include="travel\img\blog\c6.jpg" />
+    <Content Include="travel\img\blog\cat-widget1.jpg" />
+    <Content Include="travel\img\blog\cat-widget2.jpg" />
+    <Content Include="travel\img\blog\cat-widget3.jpg" />
+    <Content Include="travel\img\blog\feature-img1.jpg" />
+    <Content Include="travel\img\blog\feature-img2.jpg" />
+    <Content Include="travel\img\blog\feature-img3.jpg" />
+    <Content Include="travel\img\blog\feature-img4.jpg" />
+    <Content Include="travel\img\blog\feature-img5.jpg" />
+    <Content Include="travel\img\blog\next.jpg" />
+    <Content Include="travel\img\blog\post-img1.jpg" />
+    <Content Include="travel\img\blog\post-img2.jpg" />
+    <Content Include="travel\img\blog\pp1.jpg" />
+    <Content Include="travel\img\blog\pp2.jpg" />
+    <Content Include="travel\img\blog\pp3.jpg" />
+    <Content Include="travel\img\blog\pp4.jpg" />
+    <Content Include="travel\img\blog\prev.jpg" />
+    <Content Include="travel\img\blog\s-img.jpg" />
+    <Content Include="travel\img\blog\user-info.png" />
+    <Content Include="travel\img\d1.jpg" />
+    <Content Include="travel\img\d2.jpg" />
+    <Content Include="travel\img\d3.jpg" />
+    <Content Include="travel\img\elements\a.jpg" />
+    <Content Include="travel\img\elements\a2.jpg" />
+    <Content Include="travel\img\elements\d.jpg" />
+    <Content Include="travel\img\elements\disabled-check.png" />
+    <Content Include="travel\img\elements\disabled-radio.png" />
+    <Content Include="travel\img\elements\f1.jpg" />
+    <Content Include="travel\img\elements\f2.jpg" />
+    <Content Include="travel\img\elements\f3.jpg" />
+    <Content Include="travel\img\elements\f4.jpg" />
+    <Content Include="travel\img\elements\f5.jpg" />
+    <Content Include="travel\img\elements\f6.jpg" />
+    <Content Include="travel\img\elements\f7.jpg" />
+    <Content Include="travel\img\elements\f8.jpg" />
+    <Content Include="travel\img\elements\g1.jpg" />
+    <Content Include="travel\img\elements\g2.jpg" />
+    <Content Include="travel\img\elements\g3.jpg" />
+    <Content Include="travel\img\elements\g4.jpg" />
+    <Content Include="travel\img\elements\g5.jpg" />
+    <Content Include="travel\img\elements\g6.jpg" />
+    <Content Include="travel\img\elements\g7.jpg" />
+    <Content Include="travel\img\elements\g8.jpg" />
+    <Content Include="travel\img\elements\primary-check.png" />
+    <Content Include="travel\img\elements\primary-radio.png" />
+    <Content Include="travel\img\elements\success-check.png" />
+    <Content Include="travel\img\elements\success-radio.png" />
+    <Content Include="travel\img\elements\user1.png" />
+    <Content Include="travel\img\elements\user2.png" />
+    <Content Include="travel\img\hero-bg.jpg" />
+    <Content Include="travel\img\hotels\about-img.jpg" />
+    <Content Include="travel\img\hotels\d1.jpg" />
+    <Content Include="travel\img\hotels\d2.jpg" />
+    <Content Include="travel\img\hotels\d3.jpg" />
+    <Content Include="travel\img\hotels\d4.jpg" />
+    <Content Include="travel\img\hotels\d5.jpg" />
+    <Content Include="travel\img\hotels\d6.jpg" />
+    <Content Include="travel\img\i1.jpg" />
+    <Content Include="travel\img\i2.jpg" />
+    <Content Include="travel\img\i3.jpg" />
+    <Content Include="travel\img\i4.jpg" />
+    <Content Include="travel\img\i5.jpg" />
+    <Content Include="travel\img\i6.jpg" />
+    <Content Include="travel\img\i7.jpg" />
+    <Content Include="travel\img\i8.jpg" />
+    <Content Include="travel\img\insurence\bullet.png" />
+    <Content Include="travel\img\insurence\i1.jpg" />
+    <Content Include="travel\img\insurence\i2.jpg" />
+    <Content Include="travel\img\logo.png" />
+    <Content Include="travel\img\o1.jpg" />
+    <Content Include="travel\img\o2.jpg" />
+    <Content Include="travel\img\o3.jpg" />
+    <Content Include="travel\img\o4.jpg" />
+    <Content Include="travel\img\packages\about-img.jpg" />
+    <Content Include="travel\img\packages\d1.jpg" />
+    <Content Include="travel\img\packages\d2.jpg" />
+    <Content Include="travel\img\packages\d3.jpg" />
+    <Content Include="travel\img\packages\d4.jpg" />
+    <Content Include="travel\img\packages\d5.jpg" />
+    <Content Include="travel\img\packages\d6.jpg" />
+    <Content Include="travel\img\packages\hot-deal.jpg" />
+    <Content Include="travel\img\packages\pexels-photo-1379636.jpeg" />
+    <Content Include="travel\img\price-bg.png" />
+    <Content Include="travel\img\top-banner.jpg" />
+    <Content Include="travel\img\ui-icons_444444_256x240.png" />
+    <Content Include="travel\index.html" />
+    <Content Include="travel\insurance.html" />
+    <Content Include="travel\js\easing.min.js" />
+    <Content Include="travel\js\hoverIntent.js" />
+    <Content Include="travel\js\jquery-ui.js" />
+    <Content Include="travel\js\jquery.ajaxchimp.min.js" />
+    <Content Include="travel\js\jquery.magnific-popup.min.js" />
+    <Content Include="travel\js\jquery.nice-select.min.js" />
+    <Content Include="travel\js\mail-script.js" />
+    <Content Include="travel\js\main.js" />
+    <Content Include="travel\js\owl.carousel.min.js" />
+    <Content Include="travel\js\popper.min.js" />
+    <Content Include="travel\js\superfish.min.js" />
+    <Content Include="travel\js\vendor\bootstrap.min.js" />
+    <Content Include="travel\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="travel\mail.php" />
+    <Content Include="travel\packages.html" />
+    <Content Include="travel\Travel - Doc\css\font-awesome.min.css" />
+    <Content Include="travel\Travel - Doc\css\main.css" />
+    <Content Include="travel\Travel - Doc\css\normalize.min.css" />
+    <Content Include="travel\Travel - Doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="travel\Travel - Doc\img\logo.png" />
+    <Content Include="travel\Travel - Doc\index.html" />
+    <Content Include="travel\Travel - Doc\js\custom.js" />
+    <Content Include="travel\Travel - Doc\js\jquery-1.11.0.min.js" />
+    <Content Include="travel\Travel - Doc\js\jquery.nav.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Customer\Login.cshtml" />
+    <Content Include="Views\Customer\Registration.cshtml" />
+    <Content Include="Views\Customer\Hotels.cshtml" />
+    <Content Include="Views\Customer\Transports.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\AddHotel.cshtml" />
+    <Content Include="Views\Customer\AddTransport.cshtml" />
+    <Content Include="Views\Customer\GoogleMap.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Customer\Restuarant.cshtml" />
+    <Content Include="Views\Customer\AddRestuarant.cshtml" />
+    <Content Include="Views\Customer\Map.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="travel\.DS_Store" />
+    <Content Include="travel\css\.DS_Store" />
+    <Content Include="travel\css\bootstrap.map" />
+    <Content Include="travel\css\main.map" />
+    <Content Include="travel\fonts\fontawesome-webfont.eot" />
+    <Content Include="travel\fonts\fontawesome-webfont.ttf" />
+    <Content Include="travel\fonts\fontawesome-webfont.woff" />
+    <Content Include="travel\fonts\fontawesome-webfont.woff2" />
+    <Content Include="travel\fonts\FontAwesome.otf" />
+    <Content Include="travel\fonts\Linearicons-Free.eot" />
+    <Content Include="travel\fonts\Linearicons-Free.ttf" />
+    <Content Include="travel\fonts\Linearicons-Free.woff" />
+    <Content Include="travel\fonts\Linearicons-Free.woff2" />
+    <Content Include="travel\img\.DS_Store" />
+    <Content Include="travel\img\blog\.DS_Store" />
+    <Content Include="travel\img\elements\.DS_Store" />
+    <Content Include="travel\img\hero-bg.jpg1" />
+    <Content Include="travel\img\logo.png12" />
+    <Content Include="travel\js\.DS_Store" />
+    <Content Include="travel\scss\.DS_Store" />
+    <Content Include="travel\scss\bootstrap.scss" />
+    <Content Include="travel\scss\bootstrap\.DS_Store" />
+    <Content Include="travel\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="travel\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="travel\scss\bootstrap\bootstrap.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="travel\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="travel\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="travel\scss\bootstrap\_alert.scss" />
+    <Content Include="travel\scss\bootstrap\_badge.scss" />
+    <Content Include="travel\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="travel\scss\bootstrap\_button-group.scss" />
+    <Content Include="travel\scss\bootstrap\_buttons.scss" />
+    <Content Include="travel\scss\bootstrap\_card.scss" />
+    <Content Include="travel\scss\bootstrap\_carousel.scss" />
+    <Content Include="travel\scss\bootstrap\_close.scss" />
+    <Content Include="travel\scss\bootstrap\_code.scss" />
+    <Content Include="travel\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="travel\scss\bootstrap\_dropdown.scss" />
+    <Content Include="travel\scss\bootstrap\_forms.scss" />
+    <Content Include="travel\scss\bootstrap\_functions.scss" />
+    <Content Include="travel\scss\bootstrap\_grid.scss" />
+    <Content Include="travel\scss\bootstrap\_images.scss" />
+    <Content Include="travel\scss\bootstrap\_input-group.scss" />
+    <Content Include="travel\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="travel\scss\bootstrap\_list-group.scss" />
+    <Content Include="travel\scss\bootstrap\_media.scss" />
+    <Content Include="travel\scss\bootstrap\_mixins.scss" />
+    <Content Include="travel\scss\bootstrap\_modal.scss" />
+    <Content Include="travel\scss\bootstrap\_nav.scss" />
+    <Content Include="travel\scss\bootstrap\_navbar.scss" />
+    <Content Include="travel\scss\bootstrap\_pagination.scss" />
+    <Content Include="travel\scss\bootstrap\_popover.scss" />
+    <Content Include="travel\scss\bootstrap\_print.scss" />
+    <Content Include="travel\scss\bootstrap\_progress.scss" />
+    <Content Include="travel\scss\bootstrap\_reboot.scss" />
+    <Content Include="travel\scss\bootstrap\_root.scss" />
+    <Content Include="travel\scss\bootstrap\_tables.scss" />
+    <Content Include="travel\scss\bootstrap\_tooltip.scss" />
+    <Content Include="travel\scss\bootstrap\_transitions.scss" />
+    <Content Include="travel\scss\bootstrap\_type.scss" />
+    <Content Include="travel\scss\bootstrap\_utilities.scss" />
+    <Content Include="travel\scss\bootstrap\_variables.scss" />
+    <Content Include="travel\scss\main.scss" />
+    <Content Include="travel\scss\theme\.DS_Store" />
+    <Content Include="travel\scss\theme\_about.scss" />
+    <Content Include="travel\scss\theme\_blog.scss" />
+    <Content Include="travel\scss\theme\_contact.scss" />
+    <Content Include="travel\scss\theme\_elements.scss" />
+    <Content Include="travel\scss\theme\_flexbox.scss" />
+    <Content Include="travel\scss\theme\_footer.scss" />
+    <Content Include="travel\scss\theme\_header.scss" />
+    <Content Include="travel\scss\theme\_home.scss" />
+    <Content Include="travel\scss\theme\_insurence.scss" />
+    <Content Include="travel\scss\theme\_mixins.scss" />
+    <Content Include="travel\scss\theme\_packages.scss" />
+    <Content Include="travel\scss\theme\_reset.scss" />
+    <Content Include="travel\scss\theme\_variables.scss" />
+    <Content Include="travel\Travel - Doc\.DS_Store" />
+    <Content Include="travel\Travel - Doc\css\.DS_Store" />
+    <Content Include="travel\Travel - Doc\fonts\.DS_Store" />
+    <Content Include="travel\Travel - Doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="travel\Travel - Doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="travel\Travel - Doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="travel\Travel - Doc\fonts\FontAwesome.otf" />
+    <Content Include="travel\Travel - Doc\img\.DS_Store" />
+    <Content Include="travel\Travel - Doc\js\.DS_Store" />
+    <Content Include="travel\Travel - Doc\syntax-highlighter\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Customer\Photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904051317549_InitialMigration.resx">
+      <DependentUpon>201904051317549_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904060450107_RestuarantModelAdd.resx">
+      <DependentUpon>201904060450107_RestuarantModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5154</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5154/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
